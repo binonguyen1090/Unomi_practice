@@ -7,7 +7,6 @@ Unomi.prototype.track = function (track) {
     formEvent.properties = this.extractFormData(form);
     this.collectEvent(formEvent);
   } else {
-    console.log("Begin 3");
     var input = track.properties();
     var s;
     var t;
@@ -28,16 +27,27 @@ Unomi.prototype.track = function (track) {
       } else {
         t.properties = {};
       }
-    } else if (input.t && input.t != {}) {
-      t = { itemType: " ", itemId: " ", properties: {} };
     } else {
       t = { itemType: " ", itemId: " ", properties: {} };
     }
-    console.log(t);
-    console.log("Echo me 3");
 
-    if (input.s) {
+    if (input.s && input.s != {}) {
       s = input.s;
+      if (s.itemType) {
+        s.itemType = s.itemType;
+      } else {
+        s.itemType = " ";
+      }
+      if (s.itemId) {
+        s.itemId = s.itemId;
+      } else {
+        s.itemId = " ";
+      }
+      if (s.properties) {
+        s.properties = s.properties;
+      } else {
+        s.properties = {};
+      }
     } else {
       s = { itemType: " ", itemId: " ", properties: {} };
     }
