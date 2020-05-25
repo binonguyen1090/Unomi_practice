@@ -10,6 +10,20 @@ Unomi.prototype.fillPageData = function (unomiPage, props) {
 Unomi.prototype.processReferrer = function () {
  
 };
+Unomi.prototype.collectEvents = function (
+  events,
+  successCallback,
+  errorCallback
+) {
+  events.sessionId = this.sessionId;
+  var now = new Date();
+  events.sendAt = now.toISOString();
+  var data = JSON.stringify(events);
+
+  this.ajax({
+
+  });
+};
 
 /**
  * Identify.
