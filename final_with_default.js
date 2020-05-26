@@ -55,47 +55,29 @@ Unomi.prototype.track = function (track) {
     var t;
     if (input.t && input.t != {}) {
       t = input.t;
-      if (t.itemType) {
-        t.itemType = t.itemType;
-      } else {
-        t.itemType = " ";
-      }
-      if (t.itemId) {
-        t.itemId = t.itemId;
-      } else {
-        t.itemId = " ";
-      }
+
       if (t.properties) {
         t.properties = t.properties;
       } else {
         t.properties = {};
       }
     } else {
-      t = { itemType: " ", itemId: " ", properties: {} };
+      t = { properties: {} };
     }
 
     if (input.s && input.s != {}) {
       s = input.s;
-      if (s.itemType) {
-        s.itemType = s.itemType;
-      } else {
-        s.itemType = " ";
-      }
-      if (s.itemId) {
-        s.itemId = s.itemId;
-      } else {
-        s.itemId = " ";
-      }
+
       if (s.properties) {
         s.properties = s.properties;
       } else {
         s.properties = {};
       }
     } else {
-      s = { itemType: " ", itemId: " ", properties: {} };
+      s = { properties: {} };
     }
 
-    var prop = window.digitalData.page;
+    var prop = track.context();
     prop.additional_properties = s.properties;
     this.collectEvent(
       this.buildEvent(
