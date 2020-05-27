@@ -1,0 +1,116 @@
+@import "App.scss";
+
+.cdp_left_preview_sample-wrapper {
+  width: 460px;
+//   background: $bg-white-cl0;
+  background-color:pink;
+//   border-radius: 8px;
+//   border: 1px solid $border2-cl;
+//   box-sizing: border-box;
+
+  .left-setting-header-wrapper {
+    background: $bg-white-cl0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    height: 88px;
+    
+    // .cdp_list-header-title {
+    //     height: $height-ip2;
+    // }
+
+    .cdp_list-header-status {
+      font-size: $f4;
+      line-height: $lh1;
+      color: $text-cl2;
+
+      .cdp_list-title-infor {
+        font-style: normal;
+        font-weight: normal;
+        font-size: $f4;
+        line-height: $lh1;
+        color: $text-cl;
+        margin-right: 16px;
+      }
+
+      .cdp_btn-refresh {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .cdp_list-wrapper {
+    height: 709px;
+    overflow-y: auto;
+    margin-bottom: 4px;
+
+    .cdp_list-item {
+      padding: 14px 24px;
+      height: 63px;
+
+      /* Grey/G8 */
+      background: $bg-white-cl1;
+
+      .cdp_list-item-left {
+        @include wrapper_row;
+
+        .cdp_list-item-title {
+          padding: 0 12px;
+          font-size: $f0;
+          line-height: $lh2;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          color: $text-cl;
+        }
+
+      }
+
+      .cdp_list-item-right {
+        text-align: right;
+      }
+    }
+  }
+}
+
+// @media screen and (min-width: $hd_screen) and (max-width: $full_hd_screen) {
+//   .cdp_preview_sample-wrapper {
+//     .cdp_list-header-wrapper {
+//       flex-direction: column;
+//     }
+//   }
+// }
+
+        .cdp_list-header-title {
+          input {
+            height: 30px;
+            width: 210px;
+            background: $bg-white-cl2;
+            border: 1px solid $border1-cl;
+            box-sizing: border-box;
+            border-radius: 8px;
+          }
+
+          
+        }
+
+
+.icon-zoom-in
+{
+  position:relative;
+  left:23px;
+  z-index:999;
+  border: none;
+
+}
+.input-append input
+{
+    width: 272px;
+    border-radius: 8px;
+    border: 1px solid #D6D6D7;
+  height:40px;
+  padding-left:25px;
+  box-sizing: border-box;
+
+}
