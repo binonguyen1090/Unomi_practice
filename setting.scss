@@ -1,0 +1,31 @@
+@import "App.scss";
+
+.sidebar-container {
+  background-color: $text-cl;
+  //height: fit-content;
+}
+
+#sidebar-left {
+  flex: unset !important;
+  max-width: 90px !important;
+  min-width: 90px !important;
+}
+
+.segment_step-wrapper {
+  @include wrapper_row;
+  border: 1px solid $border1-cl;
+  width: 100%;
+  height: 100%;
+
+  
+  .segment_content-wrapper {
+    width: 100%;
+    background: $bg-white-cl1;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .segment_step-wrapper {
+    flex-direction: column;
+  }
+}
