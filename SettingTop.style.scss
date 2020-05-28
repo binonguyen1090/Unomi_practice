@@ -1,0 +1,47 @@
+@import "App.scss";
+
+.topbar-wrapper {
+  height: 60px;
+  width: 100%;
+  background-color: $bg-white-cl2;
+  @include wrapper_row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  padding: 25px;
+
+  h3 {
+    margin-bottom: 0;
+    font-weight: unset;
+  }
+
+  .topbar-title {
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: $f1;
+    line-height: $lh3;
+
+    color: #18191B;
+  }
+
+  .topbar-action-right {
+    @include wrapper_row;
+    cursor: pointer;
+
+    .topbar-item-right {
+      margin-left: 32px;
+
+      .btn-wrapper {
+        background-color: #E6F4C2;
+        border: 1px solid #BDDF6D;
+        box-sizing: border-box;
+        border-radius: 8px;
+        color: #606F01;
+        font-size: $f0;
+      }
+    }
+
+  }
+}
+
