@@ -1,0 +1,44 @@
+@import "App.scss";
+
+#sidebar-left {
+  flex: unset !important;
+  max-width: 90px !important;
+  min-width: 90px !important;
+}
+
+.setting-content {
+  @include wrapper_row;
+  height: fit-content;
+
+  .setting-item {
+    height: fit-content;
+  }
+}
+
+.cdp_33per {
+  width: 33%;
+
+}
+
+.cdp_66per {
+  width: 67%;
+  // background-color: blue;
+}
+
+@media screen and (max-width: $hd_screen) {
+  .setting-content {
+    @include wrapper_col;
+  }
+  .cdp_33per, .cdp_66per {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+
+}
+
+@media screen and (min-width: $hd_screen) and (max-width: $full_hd_screen) {
+  .setting-content {
+    // padding: 12px 24px;
+  }
+}
+
